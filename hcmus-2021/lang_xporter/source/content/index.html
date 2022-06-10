@@ -1,0 +1,59 @@
+<style>
+  body {
+    background-color: #F0F0F0;
+  }
+  #title {
+    font-weight: bold;
+    font-size: x-large;
+  }
+  #content {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .component {
+    margin-top: 2%;
+    background-color: #FFFFFF;
+    padding: 1em;
+  }
+  .words {
+    text-align: center;
+  }
+</style>
+
+<div id="content">
+  <section class="component">
+    <h1 id="title">REGULAR lang EXporter</h1>
+    <label>Choose a language</label>
+    <select id="language">
+      <option value="./content/english.txt">English</option>
+      <option value="./content/french.txt">French</option>
+      <option value="./content/german.txt">German</option>
+    </select>
+
+    <br><br>
+    <label>Search</label>
+    <input id="search" type="text" value=".*" size="16" placeholder="regex">
+
+    <br><br>
+    <button onclick="query()">Search</button>
+  </section>
+
+  <section class="component words">
+    <h1>Words</h1>
+    <div id="words"></div>
+  </section>
+</div>
+
+<script>
+  function query() {
+    const language = document.getElementById("language").value;
+    const search = document.getElementById("search").value;
+
+    fetch(`/cgi-bin/api.pl?search=${search}&language=${language}`)
+      .then(r => r.text()).then(response => {
+        const w = document.getElementById("words");
+        w.innerHTML = response;
+      });
+  }
+  query();
+</script>

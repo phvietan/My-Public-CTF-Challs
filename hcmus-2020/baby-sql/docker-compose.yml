@@ -1,0 +1,21 @@
+version: "3"
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_USER: silversoul
+            MYSQL_PASSWORD: Ec4Fw94C5
+            MYSQL_ROOT_PASSWORD: 1cE4FSCe34
+            MYSQL_DATABASE: baby-sql
+        volumes:
+            - ./db:/var/lib/mysql
+    app:
+        build: .
+        restart: always
+        links:
+            - db:database
+        depends_on:
+            - db
+        ports:
+            - "1339:1339"

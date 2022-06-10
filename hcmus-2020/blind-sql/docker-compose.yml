@@ -1,0 +1,21 @@
+version: "3"
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_USER: silversoul
+            MYSQL_PASSWORD: cE24CxqQG6g
+            MYSQL_ROOT_PASSWORD: 1356c3735daa6892
+            MYSQL_DATABASE: blind-sql
+        volumes:
+            - ./db:/var/lib/mysql
+    app:
+        build: .
+        restart: on-failure
+        links:
+            - db:database
+        depends_on:
+            - db
+        ports:
+            - "1340:1340"
