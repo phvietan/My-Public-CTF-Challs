@@ -13,4 +13,5 @@ HCMUS-CTF 2020 | [funny-express](./hcmus-2020/funny-express) | NodeJS/Express | 
 HCMUS-CTF 2020 | [algo-lover](./hcmus-2020/algo-lover) | Python/Algorithm | Simple Algorithm. Unrelated to security xD | 💀 |
 HCMUS-CTF 2021 | [lang_xporter](./hcmus-2021/lang_xporter) | Perl | A bit of understanding about cgi with weird language | 💀💀💀 |
 HCMUS-CTF 2022 | [an-sandbox-escape](./hcmus-2022/an-sandbox-escape) | NodeJS | Escape sandbox when require=process=null | 💀💀💀 |
+FPTU-CTF 2022 | [no-connection](./fptu-2022/no-connection) | PHP / Bash scripting | Run any command but no response and connection for you | 💀💀💀 |
 
