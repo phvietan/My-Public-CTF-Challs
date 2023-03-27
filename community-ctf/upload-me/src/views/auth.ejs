@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Codeme</title>
+  <link rel="stylesheet" href="/static/auth.css">
+</head>
+<body>
+  <div>
+    <h1><%= title %></h1>
+    <form method="POST">
+      Username:<br>
+      <input type="text" name="username"><br><br>
+
+      Password:<br>
+      <input type="password" name="password"><br><br>
+      <input type="submit"><br>
+      <a href="/auth/<%= (title === 'Login') ? 'signup' : 'login' %>">Or <%= (title === 'Login') ? 'sign up' : 'login' %></a>
+      <p><%= err %></p>
+    </form>
+  </div>
+</body>
+</html>

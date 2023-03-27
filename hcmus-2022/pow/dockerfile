@@ -1,0 +1,4 @@
+FROM php:apache
+
+WORKDIR /var/www/html/
+COPY source/index.php .

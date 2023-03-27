@@ -1,0 +1,49 @@
+html {
+  font-family: Georgia;
+  background-color: rgb(34, 54, 68);
+}
+
+h1 {
+  text-align: center;
+}
+
+form, main {
+  margin-top: 10vh;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+}
+
+.input-block {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+input[type=password],input[type=text] {
+  margin-top: 5px;
+  width: 100%;
+  padding: 6px;
+}
+
+input[type=submit] {
+  margin-left: 25%;
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(34, 54, 68);
+  border: 1px solid black;
+  cursor: pointer;
+  color: white;
+}
+
+form a {
+  margin-left: 25%;
+}
+
+.error {
+  color: rgb(232, 22, 22);
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-left: 25%;
+}

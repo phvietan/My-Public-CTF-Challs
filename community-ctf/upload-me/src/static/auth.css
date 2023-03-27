@@ -1,0 +1,39 @@
+html {
+  background-color: rgb(208, 233, 225);
+}
+
+div {
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+div h1 {
+  text-align: center;
+}
+
+form {
+  margin-left: 25%;
+  width: 100%;
+}
+
+form input {
+  padding: 5px;
+  width: 50%;
+}
+
+form input[type="submit"] {
+  width: 60px;
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+  border: 0.5px solid black;
+  margin-bottom: 10px;
+}
+
+p {
+  color: rgb(218, 16, 16);
+}

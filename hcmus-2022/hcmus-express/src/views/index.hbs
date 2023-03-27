@@ -1,0 +1,22 @@
+<head>
+  <title>HCMUS-Express</title>
+  <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+  <div class="main">
+    <h1>HCMUS-Express</h1>
+    <form>
+      <input name="search" placeholder="🔎 Search" value="{{search}}">
+    </form>
+
+    <div class="news">
+      {{#each news}}
+      <div class="one-news">
+        <h2>{{this.title}}</h2>
+        <p>{{{this.description}}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>

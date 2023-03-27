@@ -1,0 +1,18 @@
+FROM php:apache
+
+RUN apt update -y &&\
+      curl -fsSL https://deb.nodesource.com/setup_16.x | bash && \
+      apt install -y nodejs wget gnupg firefox-esr libasound2 libxtst6 && \
+      a2enmod proxy_http && \
+      useradd -ms /bin/bash bot && \
+      npm i -g pm2 && \
+      mkdir /bot
+
+COPY src /var/www/html/
+COPY bot /bot/
+COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY entrypoint.sh /
+
+RUN chmod +x /bot/start.sh && chown -R bot /bot/
+
+CMD bash /entrypoint.sh

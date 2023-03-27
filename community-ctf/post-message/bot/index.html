@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      background-color:blanchedalmond;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 10vh;
+    }
+    #url {
+      width: 50%;
+      height: 1.5em;
+      padding: 10px;
+      font-size: 1em;
+      margin-left: 25%;
+      display: block;
+    }
+    #btn {
+      margin-left: 25%;
+      font-size: large;
+      margin-top: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: lightgreen;
+      color: black;
+      border: 1px solid black;
+    }
+    #error {
+      color: darkred;
+      margin-left: 25%;
+    }
+    #success {
+      color: darkgreen;
+      margin-left: 25%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin will visit your url</h1>
+  <form method="POST">
+    <input placeholder="http://..." id="url" type="text" name="url">
+    <p id="error">{error}</p>
+    <p id="success">{success}</p>
+    <input id="btn" type="submit" value="Send">
+  </form>
+</body>
+</html>

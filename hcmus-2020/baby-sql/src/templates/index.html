@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>SQL manager</title>
+        <link rel="stylesheet" href="/css/index.css">
+
+    </head>
+    <body>
+        <div id="root">
+            <form action="/" method="post">
+                <h1>I bet you can't login to my admin account</h1>
+                <div class="container">
+                    <label for="uname"><b>Username: </b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required class="my-input">
+
+                    <br/>
+                    <br/>
+
+                    <label for="psw"><b>Password: </b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required class="my-input">
+
+                    <br/>
+                    <br/>
+
+                    <button type="submit">Login</button>
+                </div>
+                {% if error %}
+                    <h1 class="error-login"> Error = {{ error }} </h1>
+                {% endif %}
+            </form>
+        </div>
+        
+        <footer id="footer">
+            <h1>HCMUS Capture The Flag 2020</h1>
+            <p>Have funnnnnnn</p>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+html {
+  font-family: Courier;
+}
+
+h1 {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  margin-left: 25%;
+  padding: 5px;
+}
+
+.main {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.news {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 5vh;
+  gap: 10px;
+}
+
+.one-news {
+  border: 1px solid;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.one-news h2 {
+  font-size: x-large;
+}
+
+.one-news p {
+  font-size: medium;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <form method="POST">
+    <h1><%= title %></h1>
+    <div class="input-block">
+      Username
+      <input name="username" type="text">
+    </div>
+    <div class="input-block">
+      Password
+      <input name="password" type="password">
+    </div>
+    <input type="submit" value="<%= title %>">
+    <p class="error"><%= error %></p>
+    <% if (title === 'Register') { %>
+      <a href="./login">Already have an account?</a>
+    <% } else { %>
+      <a href="./register">Need an account?</a>
+    <% }%>
+    <br><br>
+  </form>
+</body>

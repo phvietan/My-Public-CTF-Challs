@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>SQL manager</title>
+        <link rel="stylesheet" href="/css/index.css">
+
+    </head>
+    <body>
+        <div id="root">
+            <form action="/" method="post">
+                <h1>Check for username existence in database</h1>
+                <div class="container">
+                    <label for="uname"><b>Username: </b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required class="my-input">
+
+                    <br/>
+                    <br/>
+
+                    <button type="submit">Login</button>
+                </div>
+                {% if correct %}
+                    <h1 class="correct-login"> {{ correct }} </h1>
+                {% endif %}
+                {% if error %}
+                    <h1 class="error-login"> {{ error }} </h1>
+                {% endif %}
+            </form>
+        </div>
+        
+        <footer id="footer">
+            <h1>HCMUS Capture The Flag 2020</h1>
+            <p>Have funnnnnnn</p>
+        </footer>
+
+    </body>
+</html>

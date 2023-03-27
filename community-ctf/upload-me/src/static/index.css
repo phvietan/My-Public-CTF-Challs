@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(208, 233, 225);
+}
+
+div {
+  margin-left: 20%;
+  margin-top: 5%;
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+div h1, h3 {
+  text-align: center;
+}
+
+h2, p, button, input {
+  margin-left: 10%;
+}
+
+button {
+  width: 60px;
+  cursor: pointer;
+  background-color: cadetblue;
+  color: white;
+  border: 0.5px solid black;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  padding: 8px;
+  width: 80%;
+  margin-left: 10%;
+  height: 150px;
+}
+
+#response {
+  color: greenyellow;
+}
+
+#error {
+  color: rgb(225, 21, 21);
+}

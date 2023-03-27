@@ -1,0 +1,14 @@
+FROM node:alpine
+
+RUN echo "FLAG{WEIRD_BUG_MULTER}" > /flag-87d577470816feae9889313b585f6f4f.txt && chmod 444 /flag-87d577470816feae9889313b585f6f4f.txt
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /app/
+
+COPY src .
+
+RUN npm i && chmod -R 555 .
+
+USER appuser
+
+CMD npm run start

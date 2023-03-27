@@ -1,0 +1,37 @@
+#footer {
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    padding: 10px;
+    background-color: rgb(233, 167, 87);
+    text-align: center;
+    margin-left: -1%;
+    margin-top: 100px;
+    border-style: hidden;
+    border-width: 0;
+}
+
+body {
+    background-color: rgb(241, 232, 221);
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 60vh;
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.my-input {
+    padding: 3px;
+}
+
+.error-login {
+    color: red;
+}
+
+.correct-login {
+    color: green;
+}

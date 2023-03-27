@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>Codeme</title>
+  <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+  <div>
+    <h1>Codeme</h1>
+    <h3><a id="source" href="/static/source.zip">Source</a></h1>
+    <h2>Solve this challenge for a prize</h2>
+    <p>Write a javascript code that outputs 'Hello world'. Simple as that.</p>
+    <textarea id="code" placeholder="var a = 1"></textarea><br>
+    <input type="radio" name="mode" value="0" <%= (role === 0) ? '' : 'disabled' %>> 
+    <label>Run code (only admin can run code)</label><br>
+    <input type="radio" name="mode" value="1" <%= (role === 1) ? '' : 'disabled' %>>
+    <label>Store code</label><br>
+    <button id="submit" onclick="submit()">Submit</button><br>
+
+    <p id="response"></p>
+    <p id="error"></p>
+  </div>
+
+  <script>
+    async function submit() {
+      const formData = new FormData();
+      formData.append("mode", document.querySelector('input[name="mode"]:checked')?.value || "1");
+      formData.append("code", new Blob([document.getElementById("code").value]), "code.js");
+      const resp = await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+      const { response, error } = await resp.json();
+      document.getElementById('response').innerText = response;
+      document.getElementById('error').innerText = error;
+    }
+  </script>
+  
+</body>
+</html>

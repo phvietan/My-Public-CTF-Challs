@@ -1,0 +1,1 @@
+PUPPETEER_PRODUCT=firefox npm i puppeteer && pm2 start index.js --env production

@@ -1,0 +1,15 @@
+FROM node:alpine
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+WORKDIR /home/appuser/
+
+COPY challenge .
+
+RUN chown -R appuser:appgroup .
+
+USER appuser
+
+RUN npm i && npm run build
+
+CMD npm run start

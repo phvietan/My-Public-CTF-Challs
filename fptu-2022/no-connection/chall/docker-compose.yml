@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  normal-nginx:
+    networks:
+      - no-internet
+      - internet
+    image: nginx:stable
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+    ports:
+      - 127.0.0.1:34257:80
+    restart: always
+
+##### Protected section
+
+  sandboxed-container:
+    networks:
+      - no-internet
+    build:
+      context: .
+    restart: always
+
+networks:
+  internet: {}
+  no-internet:
+    internal: true

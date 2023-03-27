@@ -1,0 +1,32 @@
+.main {
+  margin-left: 20%;
+  width: 60%;
+  margin-top: 10vh;
+}
+
+textarea {
+  padding: 10px;
+  font-size: large;
+  width: 100%;
+}
+
+.green {
+  color: white;
+  background-color: rgb(10, 156, 27);
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.red {
+  color: white;
+  background-color: rgb(213, 126, 39);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
+
+body {
+  background-color: rgb(220, 232, 220);
+}
