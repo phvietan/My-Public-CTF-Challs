@@ -7,7 +7,8 @@ List of CTF challenges I came up during my security journey hosted on https://an
 ## Web
 CTF event | Name | Language | Summary | Level
 | --- | --- | --- | --- | --- |
-Community CTF | [post-message](./community-ctf/post-message/) | Client-side Web | Newbie post message challenge | 💀💀 |
+Community CTF | [Another secure store note](./line-ctf-2023/another-secure-store-note/) | Client-side Web | Firefox specific Client-side web | 💀💀💀💀💀 |
+Community CTF | [Personal manager web](./community-ctf/post-message/) | Client-side Web | Newbie post message challenge | 💀💀 |
 Community CTF | [software-engineer](./community-ctf/software-engineer/) | NodeJS | Weird package usage and creative with Javascript object | 💀💀💀 |
 Community CTF | [upload-me](./community-ctf/upload-me/) | NodeJS | RTFM is key to security | 💀💀💀 |
 FPTU-CTF 2022 | [no-connection](./fptu-2022/no-connection) | PHP / Bash scripting | Run any command but no response and connection for you | 💀💀💀 |
