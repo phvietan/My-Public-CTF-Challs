@@ -19,7 +19,7 @@ services:
     restart: always
     container_name: assn-web
     ports:
-      - "4567:4567"
+      - "127.0.0.1:4567:4567"
     networks:
       - assn-web
     environment:

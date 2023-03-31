@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 11111
+
+app.use((req, res, next) => {
+  console.log(req.url);
+  next();
+})
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
