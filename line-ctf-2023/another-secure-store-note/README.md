@@ -3,7 +3,7 @@
 ## Description
 
 Just a simple app to store notes.
-Currently hosted at: https://aasn.anctf.tk
+Currently hosted at: https://assn.anctf.tk
 
 ## How to run
 
