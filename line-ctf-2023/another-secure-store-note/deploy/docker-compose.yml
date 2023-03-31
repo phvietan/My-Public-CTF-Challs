@@ -1,0 +1,49 @@
+version: "3.5"
+
+services: 
+  assn-redis:
+    image: redis:latest
+    command: ["redis-server", "/etc/redis/redis.conf"]
+    volumes:
+      - ./redis.conf:/etc/redis/redis.conf
+    restart: always
+    container_name: assn-redis
+    networks:
+      - assn-web
+      - assn-redis-bot
+
+  assn-web:
+    build:
+      context: ./web/
+      dockerfile: Dockerfile
+    restart: always
+    container_name: assn-web
+    ports:
+      - "4567:4567"
+    networks:
+      - assn-web
+    environment:
+      - REDIS_PASSWORD=6131e6b2bc2c0c6f52a6861e4c36bdb0
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=f8e254f7d0a6a9dc9233a4ab1ecebf347a6c803a
+      - DOMAIN=assn.anctf.tk
+  assn-bot:
+    build:
+      context: ./bot/
+      dockerfile: Dockerfile
+    restart: always
+    container_name: assn-bot
+    environment: 
+      - FLAG=LINECTF{redact}
+      - REDIS_PASSWORD=6131e6b2bc2c0c6f52a6861e4c36bdb0
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=f8e254f7d0a6a9dc9233a4ab1ecebf347a6c803a
+      - DOMAIN=assn.anctf.tk
+    depends_on:
+      - assn-redis
+    networks:
+      - assn-redis-bot
+
+networks:
+  assn-web: {}
+  assn-redis-bot: {}

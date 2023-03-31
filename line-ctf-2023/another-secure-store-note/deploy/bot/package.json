@@ -1,0 +1,16 @@
+{
+  "name": "another-secure-store-note-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PUPPETEER_PRODUCT=firefox npm i puppeteer && NODE_ENV=production node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^5.2.2",
+    "puppeteer": "^15.5.0"
+  }
+}
