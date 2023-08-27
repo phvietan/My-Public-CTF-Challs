@@ -1,7 +1,7 @@
 import { PmWorker } from './worker';
 
 function validateOrigin(origin) {
-  return /https:\/\/.*.anctf.tk/.test(origin);
+  return /https:\/\/.*.drstra.in/.test(origin);
 }
 
 window.addEventListener('message', (event) => {

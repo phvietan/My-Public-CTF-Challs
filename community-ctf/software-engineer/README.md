@@ -1,3 +1,3 @@
 # Software engineer
 
-Hosted on https://authentication.anctf.tk/
+Hosted on https://authentication-ctf.drstra.in/

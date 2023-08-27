@@ -1,6 +1,6 @@
 version: "3.5"
 
-services: 
+services:
   assn-redis:
     image: redis:latest
     command: ["redis-server", "/etc/redis/redis.conf"]
@@ -26,19 +26,19 @@ services:
       - REDIS_PASSWORD=6131e6b2bc2c0c6f52a6861e4c36bdb0
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=f8e254f7d0a6a9dc9233a4ab1ecebf347a6c803a
-      - DOMAIN=assn.anctf.tk
+      - DOMAIN=assn-ctf.drstra.in
   assn-bot:
     build:
       context: ./bot/
       dockerfile: Dockerfile
     restart: always
     container_name: assn-bot
-    environment: 
+    environment:
       - FLAG=LINECTF{redact}
       - REDIS_PASSWORD=6131e6b2bc2c0c6f52a6861e4c36bdb0
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=f8e254f7d0a6a9dc9233a4ab1ecebf347a6c803a
-      - DOMAIN=assn.anctf.tk
+      - DOMAIN=assn-ctf.drstra.in
     depends_on:
       - assn-redis
     networks:

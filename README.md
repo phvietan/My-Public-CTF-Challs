@@ -1,6 +1,6 @@
 # My-Public-CTF-Challs
 
-List of CTF challenges I came up during my security journey hosted on https://anctf.tk
+List of CTF challenges I came up during my security journey hosted on https://ctf.drstra.in
 
 ## Challenges
 

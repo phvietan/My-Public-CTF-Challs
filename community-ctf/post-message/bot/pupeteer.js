@@ -19,7 +19,7 @@ function sleep(time) {
 
 async function visit(visitUrl) {
   let page = await browser.newPage();
-  await page.goto('https://pm.anctf.tk', { timeout: 3000, waitUntil: 'domcontentloaded' });
+  await page.goto('https://pm-ctf.drstra.in', { timeout: 3000, waitUntil: 'domcontentloaded' });
   await page.evaluate(flag => { localStorage.setItem('secret', flag) }, flag); // Store flag to localStorage secret
   await page.goto(visitUrl, { timeout: 3000, waitUntil: 'domcontentloaded' });
   await sleep(6000);
