@@ -4,7 +4,8 @@ List of CTF challenges I came up during my security journey hosted on https://ct
 
 ## Challenges
 
-## Web
+I'm sorry the links in each challenges are unavailable currently.
+
 CTF event | Name | Language | Summary | Level
 | --- | --- | --- | --- | --- |
 LINE CTF 2023 | [Another secure store note](./line-ctf-2023/another-secure-store-note/) | Client-side Web | Firefox specific Client-side web | 💀💀💀💀💀 |
